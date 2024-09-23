@@ -18,6 +18,11 @@ body {
     margin-bottom: 20px;
     text-shadow: 0 4px 8px rgba(0, 0, 0, 0.4);
   }
+
+  .input-output-select{
+    margin: 20px;
+  }
+  
   
   .buttons-container {
     margin: 20px;

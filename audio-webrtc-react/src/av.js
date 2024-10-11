@@ -3,19 +3,19 @@ import React, { useEffect, useRef } from 'react';
 
 function AV({ audioContext }) {
   //AV component for visualizing audio data as a waveform
-  const canvasRef = useRef(null);
-  const analyserRef = useRef(null);
+  const visualizerCanvasRef = useRef(null);
+  const audioAnalyserRef = useRef(null);
 
   useEffect(() => {
     if (audioContext) {
-      const canvas = canvasRef.current;
+      const canvas = visualizerCanvasRef.current;
       const ctx = canvas.getContext('2d');
 
       const analyser = audioContext.createAnalyser();
       analyser.fftSize = 2048; 
       const bufferLength = analyser.frequencyBinCount;
       const dataArray = new Uint8Array(bufferLength);
-      analyserRef.current = analyser;
+      audioAnalyserRef.current = analyser;
 
       const drawWaveform = () => {
         //Function to draw the waveform on the canvas
@@ -59,7 +59,7 @@ function AV({ audioContext }) {
     }
   }, [audioContext]);
 
-  return <canvas ref={canvasRef} width="800" height="300" />;
+  return <canvas ref={visualizerCanvasRef} width="800" height="300" />;
 }
 
 export default AV;

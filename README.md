@@ -23,7 +23,7 @@ You may also see any lint errors in the console.
 
 I developed an audio streaming application that enables two users to stream audio in real time using WebRTC. The app not only allows users to manipulate the audio but also visualizes it, making interactive experience.
 
-![alt text](image.png)
+![alt text](UI.png)
 
  
 ### `Tools and Technologies:`
